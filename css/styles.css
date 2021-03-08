@@ -7,6 +7,7 @@
 body {
     width: 100%;
     height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 nav {
@@ -15,8 +16,6 @@ nav {
     left: 0;
     width: 100%;
     height: 100px;
-    /* background-color: white;
-    box-shadow: 0px 0px 20px gray; */
     z-index: 999;
 }
 
@@ -35,21 +34,44 @@ nav ul {
 nav ul li {
     display: inline-block;
     line-height: 100px;
+    margin-right: 20px;
+    transition: 200ms;
 }
 
-nav ul li {
-    margin-right: 20px;
-    text-transform: uppercase;
+.nav_menu ul li {
+    display: block;
+    line-height: 40px;
 }
+
+
+/* NAV LEFT */
 
 .nav_left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-basis: 300px;
+    flex-basis: 400px;
     height: 100%;
-    border: 1px solid black;
 }
+
+.nav_left img {
+    width: 35%;
+    margin-right: 30px;
+}
+
+.nav_left li {
+    font-size: 14px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.nav_left li:hover {
+    color: #d8328b;
+    cursor: pointer;
+}
+
+
+/* NAV RIGHT */
 
 .nav_right {
     display: flex;
@@ -59,8 +81,21 @@ nav ul li {
     height: 100%;
 }
 
+.nav_right li {
+    font-size: 14px;
+    color: gray;
+}
+
+.nav_right li:hover {
+    color: black;
+}
+
 .nav_item {
     position: relative;
+}
+
+.nav_item:hover {
+    cursor: pointer;
 }
 
 .nav_menu {
@@ -68,14 +103,34 @@ nav ul li {
     position: absolute;
     top: 70px;
     left: 0;
-    width: 220px;
-    height: 400px;
+    width: 150px;
+    padding: 10px;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 0px 0px 5px lightgray;
+    box-shadow: 0px 2px 5px lightgray;
     z-index: 0;
 }
 
+.nav_menu sup {
+    color: #d8328b;
+    font-weight: bold;
+}
+
+ul.language {
+    margin-left: 50px;
+}
+
+a.nav_button {
+    color: white;
+    background-color: #d8328b;
+    padding: 7px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+
+/* CLASSI MODULARI JS */
+
 .active {
-    display: block;
+    display: flex;
 }
